@@ -6,7 +6,13 @@ def addCard():
     while True:
         # Ask the user what they want to do
         action = input(
-            "Do you want to (a)dd a flashcard, (s)ee current questions and answers or (q)uit? "
+            """ 
+                ----------------------------
+                (a) add flashcard
+                (s) see current flashcards
+                (e) exit add mode 
+                ----------------------------
+                Input: """
         )
         if action.lower() == "a":
             # Ask the user for the flashcard question and answer
@@ -18,5 +24,5 @@ def addCard():
             for question, answer in flashcards.items():
                 print("Question: " + question)
                 print("Answer: " + answer)
-        elif action.lower() == "q":
+        elif action.lower() == "e":
             break
