@@ -5,7 +5,7 @@ import shutil
 flashcards = {}
 
 
-def check_key_value_pair(question, answer, json_data):
+def check_if_flashcard_exists(question, answer, json_data):
     if question in json_data and json_data[question] == answer:
         return True
     return False
@@ -49,25 +49,25 @@ def addCard():
 
             specifyDeck = input("Name of the deck you wish to add this card: ").lower()
             if os.path.isdir(specifyDeck):
-                with open(f"{specifyDeck}/flashcard.json", "r") as file:
-                    flashcards = json.load(file)
-                if check_key_value_pair(question, answer, flashcards):
+                with open(f"{specifyDeck}/flashcard.json", "r") as cards:
+                    flashcards = json.load(cards)
+                if check_if_flashcard_exists(question, answer, flashcards):
                     print("The flashcard already exists")
                     continue
                 # Add the flashcard to the dictionary
                 flashcards[question] = answer
                 print(f'\n### "{question}" card has been added to {specifyDeck}')
-                with open(f"{specifyDeck}/flashcard.json", "w") as file:
-                    json.dump(flashcards, file, indent=4)
+                with open(f"{specifyDeck}/flashcard.json", "w") as cards:
+                    json.dump(flashcards, cards, indent=4)
             else:
                 userInput = input(
                     f"{specifyDeck} doesn't exist do you want to create it? Y/N:  "
                 ).lower()
                 if userInput.lower() == "y":
                     os.mkdir(specifyDeck)
-                    with open(f"{specifyDeck}/flashcard.json", "w") as file:
+                    with open(f"{specifyDeck}/flashcard.json", "w") as cards:
                         flashcards = {question: answer}
-                        json.dump(flashcards, file, indent=4)
+                        json.dump(flashcards, cards, indent=4)
                 else:
                     print("Returning to menu")
                     continue
@@ -102,9 +102,9 @@ def addCard():
                 ).lower()
                 if userInput.lower() == "y":
                     os.mkdir(specifyDeck)
-                    with open(f"{specifyDeck}/flashcard.json", "w") as file:
+                    with open(f"{specifyDeck}/flashcard.json", "w") as cards:
                         flashcards = {}
-                        json.dump(flashcards, file)
+                        json.dump(flashcards, cards)
                         print(f"\n{specifyDeck} has been created, go add flashcards!")
                 else:
                     print("Returning to menu")
@@ -115,9 +115,9 @@ def addCard():
             print("\n### Deck will be saved all lowercase")
             userInput = input(f"\nName your neck deck: ").lower()
             os.mkdir(userInput)
-            with open(f"{userInput}/flashcard.json", "w") as file:
+            with open(f"{userInput}/flashcard.json", "w") as cards:
                 flashcards = {}
-                json.dump(flashcards, file)
+                json.dump(flashcards, cards)
                 print(f"\n{userInput} has been created, go add flashcards!")
 
         # Delete deck
