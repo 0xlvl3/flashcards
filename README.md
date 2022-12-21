@@ -16,4 +16,4 @@ Type the following in the location of the file
 
 ## Images
 
-![menu](https://imgur.com/a/4fdexg3)
+![menu](https://app.screencast.com/xDAzDWg7NRGZh)
