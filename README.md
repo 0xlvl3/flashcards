@@ -16,5 +16,5 @@ Type the following in the location of the file
 
 ## Images
 
-![Menu screenshot]( https://imgur.com/a/9WXxIuJ "Menu screenshot")
+[Menu screenshot]( https://imgur.com/a/9WXxIuJ "Menu screenshot")
 Need to sort how to add screenshot here? 
