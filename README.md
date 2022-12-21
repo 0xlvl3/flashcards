@@ -30,6 +30,3 @@ List Flashcards in Deck
 
 Play Deck
 ![play](/images/card-5.png)
-
-[Menu screenshot]( https://imgur.com/a/9WXxIuJ "Menu screenshot")
-Need to sort how to add screenshot here? 
