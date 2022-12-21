@@ -16,7 +16,20 @@ Type the following in the location of the file
 
 ## Images
 
-![menu](/images/menu.PNG)
+Menu
+![menu](/images/card-1.png)
+
+Create Deck
+![cd](/images/card-2.png)
+
+Create Flashcard
+![cf](/images/card-3.png)
+
+List Flashcards in Deck
+![lf](/images/card-4.png)
+
+Play Deck
+![play](/images/card-5.png)
 
 [Menu screenshot]( https://imgur.com/a/9WXxIuJ "Menu screenshot")
 Need to sort how to add screenshot here? 
